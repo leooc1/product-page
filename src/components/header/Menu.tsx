@@ -6,8 +6,8 @@ export default function Menu() {
     const [active, setActive] = useState(false)
 
     return (
-        <div className={`fixed z-50 top-0 left-0 ${active?'w-full h-full':'w-fit h-fit'} flex md:hidden`}>
-            <div className={`bg-white ${active?'w-56 min-h-full':''} top-0 left-0 pl-5 pt-10`}>
+        <div className={`${active?'fixed':'absolute'} z-50 top-0 left-0 ${active?'w-full h-full':'w-fit h-fit'} flex md:hidden`}>
+            <div className={`${active?'bg-white':'bg-transparent'} ${active?'w-80 min-h-full':''} top-0 left-0 pl-5 pt-10`}>
                 <button onClick={() => {
                     setActive(!active)
                 }}>
@@ -21,7 +21,7 @@ export default function Menu() {
                     <Link className='mb-6 transition-all h-full font-bold text-black flex items-center' href='/'>Contact</Link>
                 </nav>
             </div>
-            <div className={`h-full w-full bg-[#00000060] ${active ? '' : 'hidden'}`} onClick={()=>{
+            <div className={`h-full w-full bg-[#0000009a] ${active ? '' : 'hidden'}`} onClick={()=>{
                 setActive(false)
             }}>
             </div>
