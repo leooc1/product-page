@@ -13,6 +13,7 @@ export default function Home() {
     <>
       <Head>
         <title>Sneakers</title>
+        <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon" />
       </Head>
       <NumberProvider>
         <main className={`${kumbhSans.className}`}>
