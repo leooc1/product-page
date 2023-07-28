@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Cart from './Cart'
 import Profile from './Profile'
 import Link from 'next/link'
 import Menu from './Menu'
+import EditCart from './EditCart'
 
 export default function Header() {
+  const [active, setActive] = useState(true)
+
+
   return (
     <div className='flex h-24 items-center border-b border-[var(--light-gray)] w-full justify-around'>
       <Menu />

@@ -11,3 +11,11 @@
   --gray: hsl(219, 9%, 45%);
   --light-gray: hsl(220, 14%, 75%);
 }
+
+.delete{
+  fill: #C3CAD9;
+}
+
+.delete:hover{
+  fill: #ff3b3b;
+}

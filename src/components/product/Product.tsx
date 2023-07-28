@@ -8,10 +8,10 @@ export default function Product() {
 
     return (
         <>
-        {modal? <Modal><button className='text-2xl font-bold absolute right-0 -top-10 text-white hover:text-[var(--secondary)]' onClick={()=>{
+        {modal? <Modal><button className='text-3xl font-bold absolute right-0 -top-10 text-white hover:text-[var(--secondary)] ' onClick={()=>{
                 setModal(false)
             }}>
-                X
+                x
             </button></Modal>:null}
             <div className='md:w-auto w-full relative'>
                 <button onClick={() => {
@@ -31,7 +31,9 @@ export default function Product() {
                     <Image className='h-7' src='/images/icon-next.svg' alt='next' width={20} height={30} />
                 </button>
                 <Image className='md:cursor-zoom-in sm:rounded-2xl rounded-none w-full sm:w-fit sm:h-96 md:w-[350px] m-0 sm:m-auto md:m-0' src={`/images/image-product-${product}.jpg`} alt='product' width={350} height={350} onClick={() => {
-                    setModal(true)
+                    if(document.body.clientWidth>=751){
+                        setModal(true)
+                    }
                 }} />
                 <section className='md:flex hidden w-[350px] justify-between mt-4'>
                     <div onClick={() => setProduct(1)} className={`cursor-pointer rounded-lg ${product === 1 ? 'border-[var(--secondary)]' : 'border-transparent'} border-2`}>

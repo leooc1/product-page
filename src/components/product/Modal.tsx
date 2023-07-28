@@ -24,7 +24,7 @@ export default function Modal({children}:{children:React.JSX.Element}) {
                 }} className='absolute w-10 h-10 rounded-full bg-slate-200 flex justify-center items-center top-2/4 -right-5'>
                     <Image className='h-7' src='/images/icon-next.svg' alt='next' width={20} height={30} />
                 </button>
-                <Image className='cursor-zoom-in rounded-2xl h-fit w-96' src={`/images/image-product-${product}.jpg`} alt='product' width={350} height={350} />
+                <Image className='rounded-2xl h-fit w-96' src={`/images/image-product-${product}.jpg`} alt='product' width={350} height={350} />
             </div>
             <section className='md:flex hidden w-96 justify-between mt-4'>
                 <div onClick={() => setProduct(1)} className={`bg-white cursor-pointer rounded-lg ${product === 1 ? 'border-[var(--secondary)]' : 'border-transparent'} border-2`}>

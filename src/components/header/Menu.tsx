@@ -8,7 +8,13 @@ export default function Menu() {
     return (
         <div className={`${active?'fixed':'absolute'} z-50 top-0 left-0 ${active?'w-full h-full':'w-fit h-fit'} flex md:hidden`}>
             <div className={`${active?'bg-white':'bg-transparent'} ${active?'w-80 min-h-full':''} top-0 left-0 pl-5 pt-10`}>
-                <button onClick={() => {
+                <button id='hamburger' onClick={() => {
+                    if(active){
+                        document.getElementById('cart')?.classList.remove('hidden')
+                    }
+                    else{
+                        document.getElementById('cart')?.classList.add('hidden')
+                    }
                     setActive(!active)
                 }}>
                     <Image src={active ? '/images/icon-close.svg' : '/images/icon-menu.svg'} alt='menu' width={20} height={20} />
@@ -22,6 +28,7 @@ export default function Menu() {
                 </nav>
             </div>
             <div className={`h-full w-full bg-[#0000009a] ${active ? '' : 'hidden'}`} onClick={()=>{
+                document.getElementById('cart')?.classList.remove('hidden')
                 setActive(false)
             }}>
             </div>
