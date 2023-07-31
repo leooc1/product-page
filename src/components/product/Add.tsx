@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { NumberContext } from '../context/CartItem'
 
 export default function Add() {
-    const [num, setNum] = useState(0)
-    const {number, setNumber} = useContext(NumberContext)
+    const [num, setNum] = useState<number>(0)//numero de itens a serem adicionados
+    const {number, setNumber} = useContext(NumberContext)//numero total de itens no carrinho
 
     return (
         <div className='flex items-center sm:items-start flex-col sm:flex-row justify-center md:justify-normal'>
