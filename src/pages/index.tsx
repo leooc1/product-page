@@ -16,7 +16,7 @@ export default function Home() {
         <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon" />
       </Head>
       <NumberProvider>
-        <main className={`${kumbhSans.className}`}>
+        <main className={`bg-white ${kumbhSans.className}`}>
           <Header />
           <section className='flex mt-0 md:mt-10 px-0 md:px-10 items-center md:justify-evenly flex-col md:flex-row'>
             <Product />
